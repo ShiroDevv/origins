@@ -7,7 +7,7 @@
             "duration" : 22,
             "show_particles": false
         }, {
-            "speed": "minecraft:speed",
+            "effect": "minecraft:speed",
             "duration" : 22,
             "show_particles" : false
         }]

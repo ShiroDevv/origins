@@ -2,7 +2,7 @@
     "type": "origins:conditioned_attribute",
     "modifier": {
         "operation" : "addition",
-        "attribute" : "minecraft.generic.movement_speed",
+        "attribute" : "minecraft:generic.movement_speed",
         "value" : 0.025
     },
     "name": "Energetic",
