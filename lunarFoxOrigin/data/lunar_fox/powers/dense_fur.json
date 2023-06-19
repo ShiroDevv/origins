@@ -3,5 +3,7 @@
     "modifier": {
         "operation": "addition",
         "value": -0.0025
-    }
+    },
+    "name": "Dense fur",
+    "description": "Your fur weighs you down when swimming"
 }

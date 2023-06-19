@@ -19,5 +19,8 @@
     "entity_action" : {
         "type" : "origins:heal",
         "amount" : 1
-    }
+    },
+
+    "name": "Tasty berries",
+    "description": "Your body gets more sustenance out of berries than normal"
 }

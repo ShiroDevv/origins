@@ -15,5 +15,6 @@
             "inverted": true
         }]
     },
-    "interval": 20
+    "interval": 20,
+    "hidden": true
 }
