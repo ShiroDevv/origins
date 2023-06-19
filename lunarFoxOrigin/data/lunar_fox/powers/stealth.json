@@ -8,7 +8,7 @@
                 "effects": [
                     {
                         "effect": "minecraft:invisibility",
-                        "duration": 10
+                        "duration": 12
                     }
                 ]
             },{
