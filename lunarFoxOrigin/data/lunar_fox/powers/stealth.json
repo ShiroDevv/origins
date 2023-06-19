@@ -8,10 +8,9 @@
                 "render_armor":false,
                 "render_outline": false
             },{
-                "type": "origins:modify_resource",
+                "type": "origins:change_resource",
                 "modifier": {
-                    "operation" : "addition",
-                    "value" : -1.5
+                    "value" : -1
                 },
                 "resource": "lunar_fox:stealth_resource"
             }

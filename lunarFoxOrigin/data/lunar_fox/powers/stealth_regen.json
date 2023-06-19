@@ -9,7 +9,7 @@
         "resource": "lunar_fox:stealth_resource"
     },
     
-    "condiiton": {
+    "condition": {
         "type": "origins:and",
         "conditions": [{
             "type": "origins:exposed_to_sky"
@@ -18,5 +18,5 @@
             "inverted": true
         }]
     },
-    "interval": 10
+    "interval": 20
 }
