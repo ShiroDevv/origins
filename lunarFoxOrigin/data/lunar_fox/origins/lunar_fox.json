@@ -6,7 +6,6 @@
         "lunar_fox:energetic",
         "lunar_fox:night_life",
         "lunar_fox:nimble",
-        "lunar_fox:pescetarian",
         "lunar_fox:sly_fox",
         "lunar_fox:small_frame",
         "lunar_fox:stealth_regen",
@@ -14,8 +13,8 @@
         "lunar_fox:stealth",
         "lunar_fox:tasty_berries",
         "lunar_fox:toggle_resource",
-        "lunar_fox:toggle"
-
+        "lunar_fox:toggle",
+        "lunar_fox:vegetarian"
     ],
     "icon" : "minecraft:end_stone",
     "name": "Lunar Fox",

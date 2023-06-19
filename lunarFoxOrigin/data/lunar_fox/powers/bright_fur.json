@@ -21,9 +21,7 @@
         "conditions": [{
             "type": "origins:exposed_to_sky"
         },{
-            "type": "origins:time_of_day",
-            "comparison": "<=",
-            "compare_to": 13000
+            "type": "origins:daytime"
         }]
     },
     "interval": 20,
