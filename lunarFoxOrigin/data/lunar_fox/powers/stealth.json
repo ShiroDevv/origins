@@ -4,14 +4,16 @@
         "type": "origins:and",
         "actions": [
             {
-                "type": "origins:invisibility",
-                "render_armor":false,
-                "render_outline": false
+                "type": "origins:apply_effect",
+                "effects": [
+                    {
+                        "effect": "minecraft:invisibility",
+                        "duration": 10
+                    }
+                ]
             },{
                 "type": "origins:change_resource",
-                "modifier": {
-                    "value" : -1
-                },
+                "change": -1,
                 "resource": "lunar_fox:stealth_resource"
             }
         ]
