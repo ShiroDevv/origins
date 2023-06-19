@@ -4,11 +4,11 @@
         "type": "origins:apply_effect",
         "effects": [{
             "effect" : "minecraft:strength",
-            "duration" : "22",
+            "duration" : 22,
             "show_particles": false
         }, {
             "speed": "minecraft:speed",
-            "duration" : "22",
+            "duration" : 22,
             "show_particles" : false
         }]
     },

@@ -1,11 +1,8 @@
 {
     "type": "origins:action_over_time",
     "entity_action": {
-        "type": "origins:modify_resource",
-        "modifier": {
-            "operation": "addition",
-            "value": 1
-        },
+        "type": "origins:change_resource",
+        "change": 1,
         "resource": "lunar_fox:stealth_resource"
     },
     
