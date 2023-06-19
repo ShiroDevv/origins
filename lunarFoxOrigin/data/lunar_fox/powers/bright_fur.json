@@ -4,15 +4,15 @@
         "type": "origins:apply_effect",
         "effects": [{
             "effect": "minecraft:glowing",
-            "duration": 20,
+            "duration": 22,
             "show_particles": false
         },{
             "effect": "minecraft:slowness",
-            "duration": 20,
+            "duration": 22,
             "show_particles": false
         },{
             "effect": "minecraft:weakness",
-            "duration": 20,
+            "duration": 22,
             "show_particles": false
         }]
     },

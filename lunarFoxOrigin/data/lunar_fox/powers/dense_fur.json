@@ -1,7 +1,7 @@
 {
     "type": "origins:modify_swim_speed",
     "modifier": {
-        "operation": "subtraction",
-        "value": 0.025
+        "operation": "addition",
+        "value": -0.025
     }
 }

@@ -13,8 +13,8 @@
             },{
                 "type": "origins:modify_resource",
                 "modifier": {
-                    "operation" : "subtraction",
-                    "value" : 1.5
+                    "operation" : "addition",
+                    "value" : -1.5
                 },
                 "resource": "lunar_fox:stealth_resource"
             }
