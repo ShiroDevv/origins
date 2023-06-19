@@ -1,0 +1,23 @@
+ {
+    "powers": [
+        "lunar_fox:bite_sized",
+        "lunar_fox:bright_fur",
+        "lunar_fox:dense_fur",
+        "lunar_fox:energetic",
+        "lunar_fox:night_life",
+        "lunar_fox:nimble",
+        "lunar_fox:pescetarian",
+        "lunar_fox:sly_fox",
+        "lunar_fox:small_frame",
+        "lunar_fox:stealth_regen",
+        "lunar_fox:stealth_resource",
+        "lunar_fox:stealth",
+        "lunar_fox:tasty_berries",
+        "lunar_fox:toggle_resource",
+        "lunar_fox:toggle"
+
+    ],
+    "icon" : "minecraft:end_stone",
+    "name": "Lunar Fox",
+    "description": "The lunar fox is a small nimble fox that gets it powers from the moon. The sun heavily effects it, making it harder to live. (Developed by shirodev)"
+}

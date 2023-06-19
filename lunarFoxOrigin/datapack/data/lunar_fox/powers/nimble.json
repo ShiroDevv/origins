@@ -1,0 +1,16 @@
+{
+    "type": "origins:action_on_callback",
+    "execute_chosen_when_orb": true,
+    "entity_action_added": {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:motion 1.2 @s",
+        "permission_level" : 4
+    },
+    "entity_action_removed": {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:motion 1.2 @s",
+        "permission_level" : 4
+    },
+    "name": "Nimble",
+    "description": "You're more nimble than normal people. You move faster."
+}

@@ -1,0 +1,8 @@
+{
+    "type": "origins:inventory",
+    "title": "Hidden_pouch",
+    "drop_on_death" : false,
+    "name" : "Sly fox",
+    "description": "You can hide items, that you wont lose on death.",
+    "key" : "secondary"
+}

@@ -1,0 +1,30 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "lunar_fox:toggle_resource",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "if_action": {
+            "type": "origins:modify_resource",
+            "modifier": {
+                "operation" : "set_total",
+                "value" : 0
+            },
+            "resource": "lunar_fox:toggle_resource"
+        },
+        "else_action": {
+            "type": "origins:modify_resource",
+            "modifier": {
+                "operation" : "set_total",
+                "value" : 1
+            },
+            "resource": "lunar_fox:toggle_resource"
+        }
+    },
+    "key": "key.origins.primary_active",
+    "hidden": true
+}

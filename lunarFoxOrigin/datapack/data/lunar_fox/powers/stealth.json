@@ -1,0 +1,40 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect" : "minecraft:invisibility",
+                    "duration" : "11",
+                    "show_particles" : false
+                }
+            },{
+                "type": "origins:modify_resource",
+                "modifier": {
+                    "operation" : "subtraction",
+                    "value" : 1.5
+                },
+                "resource": "lunar_fox:stealth_resource"
+            }
+        ]
+    },
+    "condition": {
+        "type": "origins:and",
+        "conditions": [{
+            "type": "origins:resource",
+            "resource": "lunar_fox:toggle_resource",
+            "comparison": "==",
+            "compare_to": 1
+        }, {
+            "type": "origins:resource",
+            "resource": "lunar_fox:stealth_resource",
+            "comparison": ">=",
+            "compare_to": 1.5
+        }]
+    },
+    "interval": 10,
+    "name" : "Stealth",
+    "description": "(Primary) Makes you invisible for a certain amount of time. Time only regens at night, when exposed to the sky"
+}

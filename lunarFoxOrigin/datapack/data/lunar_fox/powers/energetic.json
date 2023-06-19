@@ -1,0 +1,16 @@
+{
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+        "operation" : "addition",
+        "attribute" : "minecraft.generic.movement_speed",
+        "value" : 0.025
+    },
+    "name": "Energetic",
+    "description" : "You are considerable faster when you have 7 or more hunger bars",
+    "tick_rate": 1,
+    "condition" : {
+        "type": "origins:food_level",
+        "comparison": ">=",
+        "compare_to": 7.0
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [{
+            "effect": "minecraft:glowing",
+            "duration": 20,
+            "show_particles": false
+        },{
+            "effect": "minecraft:slowness",
+            "duration": 20,
+            "show_particles": false
+        },{
+            "effect": "minecraft:weakness",
+            "duration": 20,
+            "show_particles": false
+        }]
+    },
+    "condition": {
+        "type": "origins:and",
+        "conditions": [{
+            "type": "origins:exposed_to_sky"
+        },{
+            "type": "origins:time_of_day",
+            "comparison": "<=",
+            "compare_to": 13000
+        }]
+    },
+    "interval": 20,
+    "name": "Solar Weakness",
+    "description": "When exposed to the sun, you glow and are weaker than at night."
+}

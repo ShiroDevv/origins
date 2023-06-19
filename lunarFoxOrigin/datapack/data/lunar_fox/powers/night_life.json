@@ -1,0 +1,32 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [{
+            "effect" : "minecraft:strength",
+            "duration" : "20",
+            "show_particles": false
+        }, {
+            "speed": "minecraft:speed",
+            "duration" : "20",
+            "show_particles" : false
+        }]
+    },
+    "interval": 20,
+    "condition": {
+        "type": "origins:and",
+        "conditions" : [
+            {
+                "type": "origins:time_of_day",
+                "comparison": ">=",
+                "compare_to": 13000
+            },
+            {
+                "type": "origins:exposed_to_sky"
+            }
+        ]
+    },
+
+    "name" : "Lunar Strength",
+    "description" : "You are more powerful under the moons gaze."
+}

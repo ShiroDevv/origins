@@ -1,0 +1,23 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:modify_resource",
+        "modifier": {
+            "operation": "addition",
+            "value": 1
+        },
+        "resource": "lunar_fox:stealth_resource"
+    },
+    
+    "condiiton": {
+        "type": "origins:and",
+        "conditions": [{
+            "type": "origins:exposed_to_sky"
+        },{
+            "type": "origins:time_of_day",
+            "comparison": ">=",
+            "compare_to": 13000
+        }]
+    },
+    "interval": 1
+}
