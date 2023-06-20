@@ -9,6 +9,8 @@
             "type": "origins:nbt",
             "nbt": "{id: \"minecraft:sweet_berries\"}",
             "inverted" : "true"
+        },{
+            "type": "origins:food"
         }]
     },
 
