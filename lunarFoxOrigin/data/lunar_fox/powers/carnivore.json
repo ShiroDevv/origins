@@ -15,6 +15,6 @@
         "operation" : "set"
     },
 
-    "name": "Tasty berries",
-    "description": "Your body gets more sustenance out of berries than normal"
+    "name": "carnivore",
+    "description": "Your body gets no sustenance from food that is not meat, or berries."
 }
