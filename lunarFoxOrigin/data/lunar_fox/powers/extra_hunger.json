@@ -2,7 +2,7 @@
     "type": "origins:modify_exhaustion",
     "modifier": {
         "operation": "multiply_base",
-        "value": 2.0
+        "value": 1.5
     },
     "name": "Hungry fox",
     "description":"Due to how nimble and fast you move, you need to eat more often."

@@ -5,11 +5,14 @@
         "effects": [{
             "effect" : "minecraft:strength",
             "duration" : 22,
-            "show_particles": false
+            "show_particles": false,
+            "amplifier": 1
+
         }, {
             "effect": "minecraft:speed",
             "duration" : 22,
-            "show_particles" : false
+            "show_particles" : false,
+            "amplifier" : 1
         }]
     },
     "interval": 20,

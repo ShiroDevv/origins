@@ -4,16 +4,9 @@
         "type": "origins:apply_effect",
         "effect": {
             "effect": "minecraft:night_vision",
-            "duration": 60
+            "duration": 60,
+            "show_particles": false
         }
-    },
-
-    "condition": {
-        "type": "origins:and",
-        "conditions": [{
-            "type": "origins:exposed_to_sky",
-            "inverted": true
-        }]
     },
     "interval": 20,
     "name": "Darkness dweller",

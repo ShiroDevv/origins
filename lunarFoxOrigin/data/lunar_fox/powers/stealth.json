@@ -4,13 +4,9 @@
         "type": "origins:and",
         "actions": [
             {
-                "type": "origins:apply_effect",
-                "effects": [
-                    {
-                        "effect": "minecraft:invisibility",
-                        "duration": 12
-                    }
-                ]
+                "type": "origins:invisibility",
+                "render_armor": true,
+                "render_outline": true
             },{
                 "type": "origins:change_resource",
                 "change": -1,

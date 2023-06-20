@@ -8,12 +8,12 @@
     },
     "food_modifier":{
         "name" : "Gives the player extra sustenance when eating sweet berries",
-        "value" : 2,
+        "value" : 3,
         "operation" : "multiply_base_multiplicative"
     },
     "saturation_modifier" : {
         "name" : "Gives the player extra saturation when eating sweet berries",
-        "value" : 2,
+        "value" : 3,
         "operation" : "multiply_base_multiplicative"
     },
 
