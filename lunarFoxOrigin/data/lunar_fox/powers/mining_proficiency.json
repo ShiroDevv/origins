@@ -1,0 +1,10 @@
+{
+    "type": "origins:modify_break_speed",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 1
+    },
+
+    "name": "mining proficiency",
+    "description": "Due to your ancestors living underground for generations, you can mine twice as fast."
+}

@@ -14,6 +14,10 @@
             "effect": "minecraft:weakness",
             "duration": 22,
             "show_particles": false
+        },{
+            "effect": "minecraft:blindness",
+            "duration": 22,
+            "show_particles": false
         }]
     },
     "condition": {

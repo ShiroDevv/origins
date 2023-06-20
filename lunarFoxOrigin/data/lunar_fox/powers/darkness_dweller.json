@@ -1,0 +1,13 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:night_vision",
+            "duration": 60
+        }
+    },
+    "interval": 20,
+    "name": "Darkness dweller",
+    "description": "Due to most of your life being spent in the dark, you now have better eyesight in the dark."
+}

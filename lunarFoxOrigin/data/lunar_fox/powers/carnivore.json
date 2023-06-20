@@ -1,0 +1,17 @@
+{
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:and",
+        "conditions": [{
+            "type": "origins:meat",
+            "inverted": true
+        }, {
+            "type": "origins:nbt",
+            "nbt": "{id: minecraft:sweet_berries}",
+            "inverted" : "true"
+        }]
+    },
+
+    "name": "Carnivore",
+    "description": "Other than sweet berries, your body cannot digest plants"
+}

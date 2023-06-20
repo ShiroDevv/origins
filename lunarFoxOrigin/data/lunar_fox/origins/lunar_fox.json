@@ -14,9 +14,11 @@
         "lunar_fox:tasty_berries",
         "lunar_fox:toggle_resource",
         "lunar_fox:toggle",
-        "lunar_fox:vegetarian"
+        "lunar_fox:carnivore",
+        "lunar_fox:mining_proficiency",
+        "lunar_fox:darkness_dweller"
     ],
     "icon" : "minecraft:end_stone",
     "name": "Lunar Fox",
-    "description": "The lunar fox is a small nimble fox that gets it powers from the moon. The sun heavily effects it, making it harder to live. (Developed by shirodev)"
+    "description": "The lunar fox is a small nimble fox that gets it powers from the moon. The sun heavily effects it, making it harder to live. During the day it strives in a cave, while at night it is strongest on the surface. (Developed by shirodev)"
 }
