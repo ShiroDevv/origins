@@ -2,16 +2,21 @@
     "type": "origins:prevent_item_use",
     "item_condition": {
         "type": "origins:and",
-        "conditions": [{
-            "type": "origins:meat",
-            "inverted": true
-        }, {
-            "type": "origins:nbt",
-            "nbt": "{id: \"minecraft:sweet_berries\"}",
-            "inverted" : true
-        },{
-            "type": "origins:food"
-        }]
+        "conditions": [
+            {
+                "type": "origins:and",
+                "conditions": [{
+                    "type": "origins:meat",
+                    "inverted": true
+                },{
+                    "type": "origins:food"
+                }]
+            }, {
+                "type": "origins:nbt",
+                "nbt": "{id: \"minecraft:sweet_berries\"}",
+                "inverted": true
+            }
+        ]
     },
 
     "name": "Carnivore",
