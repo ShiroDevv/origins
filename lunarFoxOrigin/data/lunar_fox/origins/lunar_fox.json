@@ -14,9 +14,9 @@
         "lunar_fox:tasty_berries",
         "lunar_fox:toggle_resource",
         "lunar_fox:toggle",
-        "lunar_fox:carnivore",
         "lunar_fox:mining_proficiency",
-        "lunar_fox:darkness_dweller"
+        "lunar_fox:darkness_dweller",
+        "lunar_fox:extra_hunger"
     ],
     "icon" : "minecraft:end_stone",
     "name": "Lunar Fox",
