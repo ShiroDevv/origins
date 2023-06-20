@@ -7,12 +7,12 @@
     "food_modifier":{
         "name" : "Gets rid of all sustenance when not eating meat or sweet berries",
         "value" : 0,
-        "operation" : "set_total"
+        "operation" : "max_total"
     },
     "saturation_modifier" : {
         "name" : "Gets rid of all saturation when not eating meat or sweet berries",
         "value" : 0,
-        "operation" : "set_total"
+        "operation" : "max_total"
     },
 
     "name": "carnivore",
