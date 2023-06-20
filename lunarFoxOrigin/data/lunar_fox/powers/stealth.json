@@ -4,10 +4,6 @@
         "type": "origins:and",
         "actions": [
             {
-                "type": "origins:invisibility",
-                "render_armor": true,
-                "render_outline": true
-            },{
                 "type": "origins:change_resource",
                 "change": -1,
                 "resource": "lunar_fox:stealth_resource"

@@ -1,0 +1,23 @@
+{
+    "type": "origins:invisibility",
+    "render_armor": false,
+    "render_outline": false,
+    "hidden": false,
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:resource",
+                "resource": "lunar_fox:toggle_resource",
+                "comparison": "==",
+                "compare_to": 1
+            },
+            {
+                "type": "origins:resource",
+                "resource": "lunar_fox:stealth_resource",
+                "comparison": ">=",
+                "compare_to": 1.5
+            }   
+        ]
+    }
+}
