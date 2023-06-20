@@ -7,7 +7,7 @@
             "inverted": true
         }, {
             "type": "origins:nbt",
-            "nbt": "{id: minecraft:sweet_berries}",
+            "nbt": "{id: \"minecraft:sweet_berries\"}",
             "inverted" : "true"
         }]
     },
