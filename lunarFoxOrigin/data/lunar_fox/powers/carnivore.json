@@ -1,24 +1,20 @@
 {
-    "type": "origins:prevent_item_use",
-    "item_condition": {
-        "type": "origins:and",
-        "conditions": [
-            {
-                "type": "origins:and",
-                "conditions": [{
-                    "type": "origins:meat",
-                    "inverted": true
-                },{
-                    "type": "origins:food"
-                }]
-            }, {
-                "type": "origins:nbt",
-                "nbt": "{id: \"minecraft:sweet_berries\"}",
-                "inverted": true
-            }
-        ]
+    "type" : "origins:modify_food",
+    "item_condition" : {
+        "type": "origins:meat",
+        "inverted": true
+    },
+    "food_modifier":{
+        "name" : "Gets rid of all sustenance when not eating meat or sweet berries",
+        "value" : 0,
+        "operation" : "set"
+    },
+    "saturation_modifier" : {
+        "name" : "Gets rid of all saturation when not eating meat or sweet berries",
+        "value" : 0,
+        "operation" : "set"
     },
 
-    "name": "Carnivore",
-    "description": "Other than sweet berries, your body cannot digest plants"
+    "name": "Tasty berries",
+    "description": "Your body gets more sustenance out of berries than normal"
 }

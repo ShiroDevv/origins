@@ -8,17 +8,13 @@
     },
     "food_modifier":{
         "name" : "Gives the player extra sustenance when eating sweet berries",
-        "value" : 2,
-        "operation" : "addition"
+        "value" : 4,
+        "operation" : "set"
     },
     "saturation_modifier" : {
         "name" : "Gives the player extra saturation when eating sweet berries",
-        "value" : 2,
-        "operation" : "addition"
-    },
-    "entity_action" : {
-        "type" : "origins:heal",
-        "amount" : 1
+        "value" : 4,
+        "operation" : "set"
     },
 
     "name": "Tasty berries",
