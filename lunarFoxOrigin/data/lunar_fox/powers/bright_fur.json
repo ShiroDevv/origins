@@ -16,7 +16,7 @@
             "show_particles": false
         },{
             "effect": "minecraft:blindness",
-            "duration": 22,
+            "duration": 40,
             "show_particles": false
         }]
     },
