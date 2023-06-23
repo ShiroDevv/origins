@@ -24,7 +24,7 @@
         },{ 
             "type": "origins:damage",
             "amount": 2.0,
-            "damage_type":"minecraft:player"
+            "damage_type":"minecraft:generic"
         }]
     },
     "name": "(Primary) Diving spear",
