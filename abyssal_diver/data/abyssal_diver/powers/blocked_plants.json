@@ -6,7 +6,9 @@
             "type": "origins:or",
             "conditions": [{
                 "type": "origins:ingredient",
-                "tag": "origins:meat"
+                "ingredient": {
+                    "tag": "origins:meat"
+                }
             },{
                 "type": "origins:meat"
             }],

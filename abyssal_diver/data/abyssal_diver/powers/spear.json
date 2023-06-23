@@ -8,7 +8,10 @@
     "shape_type": "collider",
     "fluid_handling": "none",
     "bientity_condition": {
-        "type": "origins:living"
+        "type": "origins:target_condition",
+        "condition": {
+            "type": "origins:living"
+        }
     },
     "bientity_action": {
         "type": "origins:and",
