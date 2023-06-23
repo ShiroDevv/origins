@@ -1,0 +1,16 @@
+{
+    "powers": [
+        "abyssal_diver:headlight_TY_52",
+        "abyssal_diver:rebreather",
+        "abyssal_diver:pickaxe",
+        "abyssal_diver:arm_enhancement",
+        "abyssal_diver:water_propulsion",
+        "abyssal_diver:spear",
+        "abyssal_diver:sap",
+        "abyssal_diver:flames_wrath",
+        "abyssal_diver:blocked_plants"
+    ],
+    "icon": "minecraft:sponge",
+    "name": "Abyssal Diver",
+    "description": "The only diver to escape the facility as it succumbed to the virus, and abyss, still plagued by its voices, to the point in which he is only ever safe underwater. \n\n(Programmed by shirodevv) \n\n(Story by Grayham)"
+}
