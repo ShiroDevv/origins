@@ -23,8 +23,7 @@
             }
         },{ 
             "type": "origins:damage",
-            "amount": 2.0,
-            "source": "minecraft:magic"
+            "amount": 2.0
         }]
     },
     "name": "(Primary) Diving spear",
