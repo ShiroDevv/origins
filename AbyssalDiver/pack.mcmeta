@@ -1,6 +1,6 @@
 {
-    "pack": {
-        "pack_format" : 6,
-        "description": "Adds the abyssal diver origin."
+    "pack" : {
+        "pack_format": 6,
+        "description" : "Adds a new Origin, the Abyssal Diver"
     }
 }
