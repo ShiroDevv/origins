@@ -8,6 +8,11 @@
             "duration": 24
         }
     },
+    "condition": {
+        "type": "origins:submerged_in",
+        "fluid": "minecraft:water"
+    },
+
     "interval": 20,
     "name": "Arm enhancement 13",
     "description": "The enhancements kept me alive, and without them I would've died in the program. Then again I wouldn't be in this mess either.\n(Underwater you have strength 2)"
