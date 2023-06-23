@@ -1,0 +1,26 @@
+{
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:and",
+        "conditions": [{
+            "type": "origins:or",
+            "conditions": [{
+                "type": "origins:ingredient",
+                "tag": "origins:meat"
+            },{
+                "type": "origins:meat"
+            }],
+            "inverted": true
+        },{
+            "type": "origins:food"
+        },{
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "origins:ignore_diet"
+            },
+            "inverted": true
+        }]
+    },
+    "name": "§cCarnivore instincts",
+    "description": "\"Log entry: I went up  to land to look for some food. I found some potatoes, but as I touched them The voice said 'Those are not for you.'. and I agreed with it.\n(You can only eat meat)"
+}

@@ -1,0 +1,27 @@
+{
+    "type": "origins:raycast",
+    "distance": 5.0,
+    "block": false,
+    "entity": true,
+    "shape_type": "collider",
+    "fluid_handling": "none",
+    "bientity_condition": {
+        "type": "origins:living"
+    },
+    "bientity_action": {
+        "type": "origins:and",
+        "actions": [{
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "tp @s @p"
+            }
+        },{ 
+            "type": "origins:damage",
+            "amount": 2.0,
+            "source": "minecraft:magic"
+        }]
+    },
+    "name": "§6 (Primary) Diving spear",
+    "description": "The Diving spear was a lifesaver. I could get fish with it. It wont stop me\n(Teleports a mob you are looking at to you, if they are within 5 blocks)"
+}

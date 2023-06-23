@@ -1,0 +1,20 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [{
+            "effect": "minecraft:slowness",
+            "amplifier": 1,
+            "show_particles": false,
+            "duration": 22
+        },{
+            "effect": "minecraft:weakness",
+            "amplifier": 1,
+            "show_particles": false,
+            "duration": 22
+        }]
+    },
+    "interval": 20,
+    "name": "§cIt Saps me",
+    "description": "It reached from its hole, whatever abyss its from, to slow and weaken me. \"I Will arrive and find you\"\n(On land you gain weakness 2 and slowness 2)"
+}

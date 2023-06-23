@@ -1,0 +1,46 @@
+{
+    "type": "origins:multiple",
+    "underwater": {
+        "type": "origins:modify_break_speed",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 4
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [{
+                "type": "origins:submerged_in",
+                "fluid": "minecraft:water"
+            },{ 
+                "type": "origins:enchantment",
+                "enchantment": "minecraft:aqua_affinity",
+                "comparison": "==",
+                "compare_to": 0
+            }]
+        }
+    },
+
+    "ungrounded": {
+        "type": "origins:modify_break_speed",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 4
+        },
+
+        "condition": {
+            "type": "origins:and",
+            "conditions": [{
+                "type": "origins:fluid_height",
+                "fluid": "minecraft:water",
+                "comparison": ">",
+                "compare_to": 0
+            }, {
+                "type": "origins:on_block",
+                "inverted": true
+            }]
+        }
+    },
+
+    "name": "§aPickaxe model RU-34",
+    "description": "The pickaxe that helped me get valueables, even underwater. Come to me.\n(You mine underwater at the same speed as above land)"
+}

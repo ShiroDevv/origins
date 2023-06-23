@@ -1,0 +1,20 @@
+{
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [{
+            "type": "origins:fire"
+        }, {
+            "type": "origins:name",
+            "name": "lava"
+        }]
+    },
+    "modifier": {
+        "name": "fires wrath",
+        "operation": "multiply_total",
+        "value": 2
+    },
+
+    "name": "§cThe flames wrath",
+    "description": "Heat rose as I fell into the flames that consumed me. Ultil almost nothing was left it spoke \"Burn like those before you\", than it turned to dust.\n(Double damage from lava and fire)"
+}

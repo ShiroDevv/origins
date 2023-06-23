@@ -1,0 +1,15 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:gain_air",
+        "value": 1
+    },
+    "interval": 1,
+    "condition": {
+        "type": "origins:submerged_in",
+        "fluid": "minecraft:water"
+    },
+
+    "name": "§aRebreather Model TY-76",
+    "description": "I could breath under here for however long I needed to, and it was nice having that security. I will get to you one day, permanent water.\n(You are able to breath underwater)"
+}

@@ -1,0 +1,15 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:dolphins_grace",
+            "duration": 22,
+            "show_icon": false,
+            "show_particles": false
+        }
+    },
+    "interval": 20,
+    "name": "§aWater propulsion",
+    "description": "The water propulsion was helpful as it allowed me to flee the facility before it was too late. You cannot run forever.\n(Underwater you have dolphins grace)"
+}

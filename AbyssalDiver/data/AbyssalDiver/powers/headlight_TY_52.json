@@ -1,0 +1,15 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:night_vision",
+            "duration": 200,
+            "show_particles": false,
+            "show_icon": false
+        }
+    },
+    "interval": 20,
+    "name": "§aHeadlight model TY-52",
+    "description": "The headlights light even the deepest depths. Some things remain best hidden.\n(You have permanent night vision)"
+}
