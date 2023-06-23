@@ -29,7 +29,7 @@
     },
     "name": "(Primary) Diving spear",
     "description": "The Diving spear was a lifesaver. I could get fish with it. It wont stop me\n(Teleports a mob you are looking at to you, if they are within 10 blocks)"},
-    "cooldown": 15,
+    "cooldown": 300,
     "key": "key.origins.primary_active",
     "hud_render": {
         "should_render":"true"
