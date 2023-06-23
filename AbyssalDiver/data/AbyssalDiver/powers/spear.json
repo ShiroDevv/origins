@@ -1,6 +1,6 @@
 {
     "type": "origins:raycast",
-    "distance": 5.0,
+    "distance": 10.0,
     "block": false,
     "entity": true,
     "shape_type": "collider",
@@ -23,5 +23,5 @@
         }]
     },
     "name": "§6 (Primary) Diving spear",
-    "description": "The Diving spear was a lifesaver. I could get fish with it. It wont stop me\n(Teleports a mob you are looking at to you, if they are within 5 blocks)"
+    "description": "The Diving spear was a lifesaver. I could get fish with it. It wont stop me\n(Teleports a mob you are looking at to you, if they are within 10 blocks)"
 }
