@@ -1,0 +1,38 @@
+{
+    "type": "origins:action_on_callback",
+    "execute_chosen_when_orb": true,
+	"entity_action_added":
+	{
+		"type":"origins:and",
+		"actions":[
+		{
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:width 0.50 @s",
+			"permission_level": 4
+		},
+		{
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:height 0.50 @s",
+			"permission_level": 4
+		}
+	]
+	},
+	"entity_action_removed":
+	{
+		"type":"origins:and",
+		"actions":[
+		{
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:width 1 @s",
+			"permission_level": 4
+		},
+		{
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:height 1 @s",
+			"permission_level": 4
+		}
+	]
+	},
+    "name" : "Small Stature",
+    "description" : "You and the dwarves were always close to the same size, with them taller than you. You remember having to get them to get your drinks during parties.\n\n(You are 1 block tall)"
+}

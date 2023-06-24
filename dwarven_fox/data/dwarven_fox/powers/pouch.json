@@ -1,0 +1,11 @@
+{
+    "type": "origins:inventory",
+    "title": "Mineral Pouch",
+    "drop_on_death": false,
+    "name": "Mineral Pouch",
+    "container_type": "chest",
+    "description": "When exploring with the dwarves, they would give you, and hold on to their own mineral pouches. Now they are the only things you have from that time. You will never let go of them...\n\n(You have a secondary inventory)",
+    "key": {
+        "key" : "key.origins.secondary"
+    }
+}

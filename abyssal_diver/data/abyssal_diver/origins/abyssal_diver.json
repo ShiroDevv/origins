@@ -12,5 +12,7 @@
     ],
     "icon": "minecraft:sponge",
     "name": "Abyssal Diver",
-    "description": "The only diver to escape the facility as it succumbed to the virus, and abyss, still plagued by its voices, to the point in which he is only ever safe underwater. \n\n(Programmed by shirodevv) \n\n(Story by Grayham)"
+    "description": "The only diver to escape the facility as it succumbed to the virus, and abyss, still plagued by its voices, to the point in which he is only ever safe underwater. \n\n(Programmed by shirodevv) \n\n(Story by Grayham)",
+    "impact": 3,
+    "order": 4
 }

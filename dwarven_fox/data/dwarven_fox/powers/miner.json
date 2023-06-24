@@ -1,0 +1,9 @@
+{
+    "type": "origins:modify_break_speed",
+    "modifiers": [{
+        "operation": "multiply_base",
+        "value": 1
+    }],
+    "name": "Hardened miner",
+    "description": "Holding a pickaxe reminds you of the time with the dwarves, learning how to use a pickaxe as efficiently as possible. You can't imagine how excited they would be seeing you now.\n\n(You mine twice as fast)"
+}

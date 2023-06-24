@@ -1,0 +1,14 @@
+{
+    "type": "origins:prevent_sleep",
+    "block_condition": {
+        "type": "origins:height",
+        "comparison": "30",
+        "compare_to": "<=",
+        "inverted": false
+    },
+    "message": "You and your clan cannot sleep well up high. Something about it makes it so you cannot fall asleep.",
+    "set_spawn_point": false,
+
+    "name": "Nostalgic Rest",
+    "description": "The dwarves were never able to sleep near the surface, no matter how much they tried. Something about the mines helped them keep moving on, and so did you. One day, you will find another clan to share more memories with. Until, and after then, you will keep on sharing your fallen comrades heritage.\n\n(You cannot sleep above y =30)"
+}

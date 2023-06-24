@@ -1,0 +1,25 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "effect" : "minecraft:weakness",
+                "duration": 22,
+                "amplifier": 1,
+                "show_particles": false
+            }
+        ]
+    },
+    "condition": {
+        "type": "origins:and",
+        "actions": [{
+            "type": "origins:daytime"
+        }, {
+            "type": "origins:exposed_to_sky"
+        }]
+    },
+    "interval": 20,
+    "name": "Miners curse",
+    "description": "With all of the years with the dwarves, your body isnt use to the sun, making you have less confident attacks. You heavily prefer fighting underground. You wish that they were still here, to help you get past this problem\n\n(You get weakness in the sun)"
+}

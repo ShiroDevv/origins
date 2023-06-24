@@ -1,0 +1,10 @@
+{
+    "type": "origins:attribute",
+    "modifiers": [{
+            "name": "Speedy",
+            "attribute": "minecraft:generic.movement_speed"
+    }],
+    "update_health": false,
+    "name": "Dwarven Speed",
+    "description": "The dwarves you lived with were all about efficiency. At some point you guys got so fast not even the dwarves could keep up.\n\n(You move faster)"
+}

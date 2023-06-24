@@ -1,0 +1,14 @@
+{
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "name": "extra health",
+            "attribute": "minecraft:generic.max_health",
+            "value": 4,
+            "operation": "addition"
+        }
+    ],
+    "update_health": true,
+    "name": "Small frame",
+    "description": "With the dwarves, they always protected you. With your size, they always were worried about your frame, and how you were more at risk at getting hurt. In return, you always helped them get their ores, and took care of their needs. Sometimes you wish you could go back to that....\n\n(You have 4 less hearts.)"
+}

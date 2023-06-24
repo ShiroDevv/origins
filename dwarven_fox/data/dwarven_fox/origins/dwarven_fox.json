@@ -1,0 +1,20 @@
+{
+    "powers": [
+        "dwarven_fox:iron_will",
+        "dwarven_fox:pouch",
+        "dwarven_fox:speedy",
+        "dwarven_fox:miner",
+        "dwarven_fox:eyes",
+        "dwarven_fox:hidden",
+        "dwarven_fox:small",
+        "dwarven_fox:small_frame",
+        "dwarven_fox:curse",
+        "dwarven_fox:rest"
+    ],
+
+    "icon": "minecraft:sweet_berries",
+    "name": "Dwarven Fox",
+    "Description": "Previously the pets of a group of dwarves, they have evolved and taken on their ways. Now they are the only remnants of that fallen clan.\n\n (This is a story origin. Over time you will get messages with its story)\n\n",
+    "order": 4,
+    "impact": 2
+}

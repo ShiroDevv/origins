@@ -1,0 +1,22 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [{
+            "effect": "minecraft:strength",
+            "amplifier": 1,
+            "duration": 800
+        }, {
+            "effect": "minecraft:strength",
+            "amplifier": 1,
+            "duration": 800
+        }, {
+            "effect": "minecraft:resistance",
+            "duration": 400
+        }]
+    },
+    "cooldown": 5200,
+    "key": "key.origins.primary",
+    "name": "(Primary) Iron Will",
+    "description": "Your family and the dwarves were good friends, treating eachother like family. When the dwarves were in tough times, you saw their true strength show. Without them who knows what could've happened to you...\n\n (When using the ability you get strength, speed and resistance)"
+}
