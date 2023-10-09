@@ -16,7 +16,7 @@
         }]
     },
     "cooldown": 5200,
-    "key": "key.origins.primary",
+    "key": "key.origins.primary_active",
     "name": "(Primary) Iron Will",
     "description": "Your family and the dwarves were good friends, treating eachother like family. When the dwarves were in tough times, you saw their true strength show. Without them who knows what could've happened to you...\n\n (When using the ability you get strength, speed and resistance)"
 }
