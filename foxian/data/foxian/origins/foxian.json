@@ -1,0 +1,14 @@
+{
+    "powers": [
+        "foxian:nimble",
+        "foxian:hunger_score",
+        "foxian:fluff",
+        "foxian:foxify",
+        "foxian:init"
+    ],
+    "icon" : "minecraft:sweet_berries",
+    "name": "Foxian",
+    "description": "The foxian is a small but nimble creature, who strives during the day, and while well fed.",
+    "impact": 1,
+    "order": 50
+}

@@ -1,0 +1,96 @@
+{
+    "type": "origins:multiple",
+    "sleep_foxify_enable": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:scoreboard",
+            "compare_to": 1,
+            "comparison": "==",
+            "objective": "sleeping"
+        },
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [{
+                "type": "origins:apply_effect",
+                "effect": {
+                    "amplifier": 0,
+                    "duration": 100,
+                    "effect": "minecraft:invisibility",
+                    "is_ambient": false,
+                    "show_icon": false,
+                    "show_particles": false
+                }
+            }, {
+                "type": "origins:change_resource",
+                "change": 1,
+                "operation": "set",
+                "resource": "foxian:foxify_render_fox"
+            }, {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:height 1 @e[type=fox,nbt={Sleeping:1b,NoAI:1b},tag=eepin,limit=1]"
+            }, {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:width 1 @e[type=fox,nbt={Sleeping:1b,NoAI:1b},tag=eepin,limit=1]"
+            }]
+        }
+    },
+
+    "sleep_foxify_disable": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:scoreboard",
+            "compare_to": 0,
+            "comparison": "==",
+            "objective": "sleeping"
+        },
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [{
+                "type": "origins:clear_effect",
+                "effect": "minecraft:invisibility"
+            }, {
+                "type": "origins:change_resource",
+                "change": 0,
+                "operation": "set",
+                "resource": "foxian:foxify_render_fox"
+            }, {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:height 0.1 @e[type=fox,nbt={Sleeping:1b,NoAI:1b},tag=eepin,limit=1]"
+            }, {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:width 0.1 @e[type=fox,nbt={Sleeping:1b,NoAI:1b},tag=eepin,limit=1]"
+            }]
+        }
+    },
+
+    "render_fox": {
+        "type": "origins:resource",
+        "hud_render": {
+            "should_render": false
+        },
+        "max": 1,
+        "min": 0
+    },
+
+    "hide_fox": {
+        "type": "origins:prevent_entity_render",
+        "condition": {
+            "type": "origins:resource",
+            "compare_to": 0,
+            "comparison": "==",
+            "resource": "foxian:foxify_render_fox"
+        },
+        "entity_condition": {
+            "type": "origins:and",
+            "conditions": [{
+                "type": "origins:entity_type",
+                "entity_type": "fox"
+            }, {
+                "type": "origins:nbt",
+                "nbt": "{Sleeping:1b,NoAI:1b}"
+            }]
+        }
+    }
+}

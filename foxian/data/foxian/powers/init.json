@@ -1,0 +1,180 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "negative_hunger_score_actions": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "compare_to": 0,
+                        "comparison": "==",
+                        "resource": "foxian:hunger_score_positive"
+                    },
+                    {
+                        "type": "origins:food_level",
+                        "compare_to": 10,
+                        "comparison": "<="
+                    }
+                ]
+            },
+            "if_action": {
+                "type": "origins:change_resource",
+                "change": 1,
+                "operation": "add",
+                "resource": "foxian:hunger_score_negative"
+            },
+            "else_action": {
+                "type": "origins:change_resource",
+                "change": -1,
+                "operation": "add",
+                "resource": "foxian:hunger_score_negative"
+            }
+        }
+    },
+    "positive_hunger_score_actions": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:resource",
+                        "compare_to": 0,
+                        "comparison": "==",
+                        "resource": "foxian:hunger_score_negative"
+                    },
+                    {
+                        "type": "origins:food_level",
+                        "compare_to": 15,
+                        "comparison": ">="
+                    }
+                ]
+            },
+            "if_action": {
+                "type": "origins:change_resource",
+                "change": 1,
+                "operation": "add",
+                "resource": "foxian:hunger_score_positive"
+            },
+            "else_action": {
+                "type": "origins:change_resource",
+                "change": -1,
+                "operation": "add",
+                "resource": "foxian:hunger_score_positive"
+            }
+        }
+    },
+
+    "small": {
+        "type": "origins:action_on_callback",
+        "execute_chosen_when_orb": true,
+        "entity_action_added": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 0.50 @s"
+                }, {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 0.50 @s"
+                }
+            ]
+        },
+        "entity_action_removed": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 1 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 1 @s"
+                }
+            ]
+        }
+    },
+
+    "sleeping_scoreboard": {
+        "type": "origins:action_on_callback", 
+        "execute_chosen_when_orb": true,
+        "entity_action_gained": {
+            "type": "origins:and",
+            "actions": [{
+                "type": "origins:execute_command",
+                "command": "scoreboard objectives add sleeping minecraft.custom:minecraft.sleep_in_bed"
+            }, {
+                "type": "origins:execute_command",
+                "command": "scoreboard objectives add awake minecraft.custom:minecraft.time_since_rest"
+            }, {
+                "type": "origins:execute_command",
+                "command": "summon fox ~ ~0.05 ~ {NoAI:1b,Sleeping:1b,NoGravity:1b,Type:snow,Tags:[\"eepin\"],HandItems:[{id:air,Count:1}],Data:{},HandDropChances:[f],CanPickUpLoot:0b}"
+            }, {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:height 0.1 @e[type=fox,nbt={Sleeping:1b,NoAI:1b},tag=eepin,limit=1]"
+            }, {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:width 0.1 @e[type=fox,nbt={Sleeping:1b,NoAI:1b},tag=eepin,limit=1]"
+            }]
+        }
+    },
+
+    "sleep_resetter": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "apoli:execute_command",
+            "command": "scoreboard players set @a[scores={awake=1..}] sleeping 0"
+        }
+    },
+
+    "fox_teleporter": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:resource",
+                "resource": "foxian:foxify_render_fox",
+                "compare_to": 1,
+                "comparison": "==",
+                "inverted": false
+            },
+            "if_action": {
+                "type":"origins:execute_command",
+                "command": "tp @e[type=fox,nbt={Sleeping:1b,NoAI:1b},tag=eepin,limit=1] ~ ~-.05 ~ facing ^-0.3 ^ ^-0.15"
+            }, 
+            "else_action": {
+                "type":"origins:execute_command",
+                "command": "tp @e[type=fox,nbt={Sleeping:1b,NoAI:1b},tag=eepin,limit=1] ~ ~10000 ~ facing ^-0.3 ^ ^-0.15"
+            }
+        }
+    },
+
+    "stop_fox_collision": {
+        "type": "origins:prevent_entity_collision",
+        "bientity_condition": {
+            "type": "origins:and",
+            "conditions": [ {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:and",
+                    "conditions": [{
+                        "type": "origins:entity_type",
+                        "entity_type": "fox"
+                    }, {
+                        "type": "origins:nbt",
+                        "nbt": "{Sleeping:1b,NoAI:1b}"
+                    }]
+                }
+            }]
+        }
+    }
+}

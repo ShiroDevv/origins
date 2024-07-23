@@ -1,0 +1,127 @@
+{
+    "type": "origins:multiple",
+    "hidden": false,
+    "name": "§eHunger score",
+    "description": "Gives a buff, or debuff based off of hunger score.",
+    
+    "positive": {
+        "type": "origins:resource",
+        "max": 100,
+        "min": 0,
+        "start_value": 0,
+        "max_action": {
+            "type": "origins:play_sound",
+            "category": "players",
+            "sound": "minecraft:entity.experience_orb.pickup",
+            "volume": 1,
+            "pitch": 1
+        },
+        "min_action": {
+            "type": "origins:play_sound",
+            "category": "players",
+            "sound": "minecraft:entity.experience_bottle.throw",
+            "volume": 1,
+            "pitch": 0
+        },
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 16,
+            "order": 0,
+            "condition": {
+                "type": "origins:resource",
+                "compare_to": 0,
+                "comparison": "==",
+                "inverted": true,
+                "resource": "foxian:hunger_score_positive"
+            }
+        }
+    },
+    
+    "damage_reduction": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:resistance",
+                "duration": 25,
+                "show_particles": false,
+                "show_icon": true
+            }
+        },
+        "condition": {
+            "type": "origins:resource",
+            "compare_to": 100,
+            "comparison": "==",
+            "resource": "foxian:hunger_score_positive"
+        }
+    },
+    
+    "hunger_score_positive_damage_affect": {
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "addition",
+            "value": 1,
+            "modifier": {
+                "operation": "multiply_total_multiplicative",
+                "value": 0.1,
+                "modifier": {
+                    "operation": "multiply_base",
+                    "value": 0,
+                    "resource": "foxian:hunger_score_positive"
+                }
+            }
+        }
+    },
+    
+    "negative": {
+        "type": "origins:resource",
+        "max": 50,
+        "min": 0,
+        "start_value": 0,
+        "max_action": {
+            "type": "origins:play_sound",
+            "sound": "minecraft:block.glass.break",
+            "volume": 1,
+            "pitch": 1
+        },
+        "min_action": {
+            "type": "origins:play_sound",
+            "category": "players",
+            "sound": "minecraft:entity.experience_bottle.throw",
+            "volume": 1,
+            "pitch": 1
+        },
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 17,
+            "order": 1,
+            "condition": {
+                "type": "origins:resource",
+                "compare_to": 0,
+                "comparison": "==",
+                "inverted": true,
+                "resource": "foxian:hunger_score_negative"
+            }
+        }
+    },
+    
+    "hunger_score_negative_damage_affect": {
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "addition",
+            "value": -1,
+            "modifier": {
+                "operation": "multiply_base_multiplicative",
+                "value": 0.1,
+                "modifier": {
+                    "operation": "multiply_base",
+                    "value": 0,
+                    "resource": "foxian:hunger_score_negative"
+                }
+            }
+        }
+    }
+}
