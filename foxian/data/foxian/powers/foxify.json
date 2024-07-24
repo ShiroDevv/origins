@@ -1,69 +1,7 @@
 {
     "type": "origins:multiple",
-    "sleep_foxify_enable": {
-        "type": "origins:action_over_time",
-        "condition": {
-            "type": "origins:scoreboard",
-            "compare_to": 1,
-            "comparison": "==",
-            "objective": "sleeping"
-        },
-        "interval": 1,
-        "entity_action": {
-            "type": "origins:and",
-            "actions": [{
-                "type": "origins:apply_effect",
-                "effect": {
-                    "amplifier": 0,
-                    "duration": 100,
-                    "effect": "minecraft:invisibility",
-                    "is_ambient": false,
-                    "show_icon": false,
-                    "show_particles": false
-                }
-            }, {
-                "type": "origins:change_resource",
-                "change": 1,
-                "operation": "set",
-                "resource": "foxian:foxify_render_fox"
-            }, {
-                "type": "origins:execute_command",
-                "command": "scale set pehkui:height 1 @e[type=fox,nbt={Sleeping:1b,NoAI:1b},tag=eepin,limit=1]"
-            }, {
-                "type": "origins:execute_command",
-                "command": "scale set pehkui:width 1 @e[type=fox,nbt={Sleeping:1b,NoAI:1b},tag=eepin,limit=1]"
-            }]
-        }
-    },
-
-    "sleep_foxify_disable": {
-        "type": "origins:action_over_time",
-        "condition": {
-            "type": "origins:scoreboard",
-            "compare_to": 0,
-            "comparison": "==",
-            "objective": "sleeping"
-        },
-        "interval": 1,
-        "entity_action": {
-            "type": "origins:and",
-            "actions": [{
-                "type": "origins:clear_effect",
-                "effect": "minecraft:invisibility"
-            }, {
-                "type": "origins:change_resource",
-                "change": 0,
-                "operation": "set",
-                "resource": "foxian:foxify_render_fox"
-            }, {
-                "type": "origins:execute_command",
-                "command": "scale set pehkui:height 0.1 @e[type=fox,nbt={Sleeping:1b,NoAI:1b},tag=eepin,limit=1]"
-            }, {
-                "type": "origins:execute_command",
-                "command": "scale set pehkui:width 0.1 @e[type=fox,nbt={Sleeping:1b,NoAI:1b},tag=eepin,limit=1]"
-            }]
-        }
-    },
+    "name": "§eFoxify",
+    "description": "When you sleep, you look like a fox",
 
     "render_fox": {
         "type": "origins:resource",

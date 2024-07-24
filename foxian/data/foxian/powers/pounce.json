@@ -1,0 +1,26 @@
+{
+    "type": "origins:active_self",
+    "cooldown": 400,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [{
+            "type": "origins:add_velocity",
+            "z": 1,
+            "space": "local",
+            "client": true,
+            "server": true,
+            "y": 0.5
+        }, {
+            "type": "origins:apply_effect",
+            "effect": {
+                "amplifier": 3,
+                "duration": 100,
+                "effect": "minecraft:strength"
+            }
+        }]
+    },
+    "key": "key.origins.primary_active",
+    "hud_render": {
+        "should_render": true
+    }
+}

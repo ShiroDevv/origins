@@ -22,58 +22,6 @@
             }
         }
     },
-    "wet_resource_default_addition": {
-        "type": "origins:action_over_time",
-        "interval": 20,
-        "condition": {
-            "type": "origins:or",
-            "conditions": [
-                {
-                    "type": "origins:in_rain"
-                },
-                {
-                    "type": "origins:submerged_in",
-                    "fluid": "minecraft:water"
-                }
-            ]
-        },
-        "entity_action": {
-            "type": "origins:change_resource",
-            "change": 1,
-            "operation": "add",
-            "resource": "foxian:fluff_wet_resource"
-        }
-    },
-    "wet_resource_default_removal": {
-        "type": "origins:action_over_time",
-        "interval": 10,
-        "condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:in_rain",
-                    "inverted": true
-                },
-                {
-                    "type": "origins:submerged_in",
-                    "fluid": "minecraft:water",
-                    "inverted": true
-                },
-                {
-                    "type": "origins:resource",
-                    "compare_to": 2,
-                    "comparison": "<=",
-                    "resource": "foxian:fluff_snowy_resource"
-                }
-            ]
-        },
-        "entity_action": {
-            "type": "origins:change_resource",
-            "change": -1,
-            "operation": "add",
-            "resource": "foxian:fluff_wet_resource"
-        }
-    },
     "snowy_resource": {
         "type": "origins:resource",
         "max": 100,
@@ -91,127 +39,6 @@
                 "inverted": true,
                 "resource": "foxian:fluff_snowy_resource"
             }
-        }
-    },
-    "snow_resource_default_addition": {
-        "type": "origins:action_over_time",
-        "interval": 10,
-        "condition": {
-            "type": "origins:or",
-            "conditions": [
-                {
-                    "type": "origins:biome",
-                    "condition": {
-                        "type": "origins:precipitation",
-                        "precipitation": "snow"
-                    }
-                },
-                {
-                    "type": "origins:on_block",
-                    "block_condition": {
-                        "type": "origins:block",
-                        "block": "minecraft:snow"
-                    }
-                },
-                {
-                    "type": "origins:on_block",
-                    "block_condition": {
-                        "type": "origins:block",
-                        "block": "minecraft:snow_block"
-                    }
-                }
-            ]
-        },
-        "entity_action": {
-            "type": "origins:change_resource",
-            "change": 1,
-            "operation": "add",
-            "resource": "foxian:fluff_snowy_resource"
-        }
-    },
-    "snow_resource_default_removal": {
-        "type": "origins:action_over_time",
-        "interval": 10,
-        "condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:biome",
-                    "condition": {
-                        "type": "origins:precipitation",
-                        "precipitation": "snow"
-                    },
-                    "inverted": true
-                },
-                {
-                    "type": "origins:on_block",
-                    "block_condition": {
-                        "type": "origins:block",
-                        "block": "minecraft:snow"
-                    },
-                    "inverted": true
-                },
-                {
-                    "type": "origins:on_block",
-                    "block_condition": {
-                        "type": "origins:block",
-                        "block": "minecraft:snow_block"
-                    },
-                    "inverted": true
-                }
-            ]
-        },
-        "entity_action": {
-            "type": "origins:change_resource",
-            "change": -1,
-            "operation": "add",
-            "resource": "foxian:fluff_snowy_resource"
-        }
-    },
-    "snow_resource_conversion": {
-        "type": "origins:action_over_time",
-        "interval": 20,
-        "condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:biome",
-                    "condition": {
-                        "type": "origins:precipitation",
-                        "precipitation": "snow"
-                    },
-                    "inverted": true
-                },
-                {
-                    "type": "origins:on_block",
-                    "block_condition": {
-                        "type": "origins:block",
-                        "block": "minecraft:snow"
-                    },
-                    "inverted": true
-                },
-                {
-                    "type": "origins:on_block",
-                    "block_condition": {
-                        "type": "origins:block",
-                        "block": "minecraft:snow_block"
-                    },
-                    "inverted": true
-                },
-                {
-                    "type": "origins:resource",
-                    "compare_to": 0,
-                    "comparison": "==",
-                    "inverted": true,
-                    "resource": "foxian:fluff_snowy_resource"
-                }
-            ]
-        },
-        "entity_action": {
-            "type": "origins:change_resource",
-            "change": 1,
-            "operation": "add",
-            "resource": "foxian:fluff_wet_resource"
         }
     },
     "snow_on_enter_water": {
@@ -251,272 +78,152 @@
             ]
         }
     },
-    "snow_and_water_in_sun": {
+    "_comment": {
+        "type": "origins:none",
+        "line_1": "This includes the removal of the wet resource, the snow resource, and adding to the snow resource."
+    },
+    "10_interval": {
         "type": "origins:action_over_time",
         "interval": 10,
-        "condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:exposed_to_sun"
-                },
-                {
-                    "type": "origins:biome",
-                    "condition": {
-                        "type": "origins:precipitation",
-                        "precipitation": "snow"
-                    },
-                    "inverted": true
-                },
-                {
-                    "type": "origins:on_block",
-                    "block_condition": {
-                        "type": "origins:block",
-                        "block": "minecraft:snow"
-                    },
-                    "inverted": true
-                },
-                {
-                    "type": "origins:on_block",
-                    "block_condition": {
-                        "type": "origins:block",
-                        "block": "minecraft:snow_block"
-                    },
-                    "inverted": true
-                },
-                {
-                    "type": "origins:in_rain",
-                    "inverted": true
-                },
-                {
-                    "type": "origins:submerged_in",
-                    "fluid": "minecraft:water",
-                    "inverted": true
-                }
-            ]
-        },
         "entity_action": {
             "type": "origins:and",
             "actions": [
                 {
-                    "type": "origins:change_resource",
-                    "resource": "foxian:fluff_wet_resource",
-                    "change": -5,
-                    "operation": "add"
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:in_rain",
+                                "inverted": true
+                            },
+                            {
+                                "type": "origins:submerged_in",
+                                "fluid": "minecraft:water",
+                                "inverted": true
+                            },
+                            {
+                                "type": "origins:resource",
+                                "compare_to": 2,
+                                "comparison": "<=",
+                                "resource": "foxian:fluff_snowy_resource"
+                            }
+                        ]
+                    },
+                    "if_action": {
+                        "type": "origins:change_resource",
+                        "change": -1,
+                        "operation": "add",
+                        "resource": "foxian:fluff_wet_resource"
+                    }
                 },
                 {
-                    "type": "origins:change_resource",
-                    "resource": "foxian:fluff_snowy_resource",
-                    "change": -5,
-                    "operation": "add"
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:exposed_to_sun"
+                            },
+                            {
+                                "type": "origins:biome",
+                                "condition": {
+                                    "type": "origins:precipitation",
+                                    "precipitation": "snow"
+                                },
+                                "inverted": true
+                            },
+                            {
+                                "type": "origins:on_block",
+                                "block_condition": {
+                                    "type": "origins:block",
+                                    "block": "minecraft:snow"
+                                },
+                                "inverted": true
+                            },
+                            {
+                                "type": "origins:on_block",
+                                "block_condition": {
+                                    "type": "origins:block",
+                                    "block": "minecraft:snow_block"
+                                },
+                                "inverted": true
+                            },
+                            {
+                                "type": "origins:in_rain",
+                                "inverted": true
+                            },
+                            {
+                                "type": "origins:submerged_in",
+                                "fluid": "minecraft:water",
+                                "inverted": true
+                            }
+                        ]
+                    },
+                    "if_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "foxian:fluff_wet_resource",
+                                "change": -5,
+                                "operation": "add"
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "foxian:fluff_snowy_resource",
+                                "change": -5,
+                                "operation": "add"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:biome",
+                                "condition": {
+                                    "type": "origins:precipitation",
+                                    "precipitation": "snow"
+                                }
+                            },
+                            {
+                                "type": "origins:on_block",
+                                "block_condition": {
+                                    "type": "origins:block",
+                                    "block": "minecraft:snow"
+                                }
+                            },
+                            {
+                                "type": "origins:on_block",
+                                "block_condition": {
+                                    "type": "origins:block",
+                                    "block": "minecraft:snow_block"
+                                }
+                            }
+                        ]
+                    },
+                    "if_action": {
+                        "type": "origins:change_resource",
+                        "change": 1,
+                        "operation": "add",
+                        "resource": "foxian:fluff_snowy_resource"
+                    },
+                    "else_action": {
+                        "type": "origins:change_resource",
+                        "change": -1,
+                        "operation": "add",
+                        "resource": "foxian:fluff_snowy_resource"
+                    }
                 }
             ]
         }
     },
-
-    "water_debuff_tier_one": {
-        "type": "origins:action_over_time",
-        "interval": 20,
-        "condition": {
-            "type": "origins:and",
-            "conditions": [{
-                "type": "origins:resource",
-                "compare_to": 50,
-                "comparison": ">=",
-                "resource": "foxian:fluff_wet_resource"
-            }, {
-                "type": "origins:resource",
-                "compare_to": 70,
-                "comparison": "<=",
-                "resource": "foxian:fluff_wet_resource"
-            }]
-        },
-
-        "entity_action": {
-            "type": "origins:apply_effect",
-            "effect": {
-                "effect": "minecraft:slowness",
-                "amplifier": 0,
-                "duration": 25,
-                "is_ambient": false,
-                "show_icon": true,
-                "show_particles": false
-            }
-        }
-    },
-
-    "water_debuff_tier_two": {
-        "type": "origins:action_over_time",
-        "interval": 20,
-        "condition": {
-            "type": "origins:and",
-            "conditions": [{
-                "type": "origins:resource",
-                "compare_to": 70,
-                "comparison": ">=",
-                "resource": "foxian:fluff_wet_resource"
-            }, {
-                "type": "origins:resource",
-                "compare_to": 90,
-                "comparison": "<=",
-                "resource": "foxian:fluff_wet_resource"
-            }]
-        },
-
-        "entity_action": {
-            "type": "origins:apply_effect",
-            "effect": {
-                "effect": "minecraft:slowness",
-                "amplifier": 1,
-                "duration": 25,
-                "is_ambient": false,
-                "show_icon": true,
-                "show_particles": false
-            }
-        }
-    },
-
-    "water_debuff_tier_three": {
-        "type": "origins:action_over_time",
-        "interval": 20,
-        "condition": {
-            "type": "origins:and",
-            "conditions": [{
-                "type": "origins:resource",
-                "compare_to": 90,
-                "comparison": ">=",
-                "resource": "foxian:fluff_wet_resource"
-            }, {
-                "type": "origins:resource",
-                "compare_to": 100,
-                "comparison": "<=",
-                "resource": "foxian:fluff_wet_resource"
-            }]
-        },
-
-        "entity_action": {
-            "type": "origins:apply_effect",
-            "effects" : [
-                {
-                    "effect": "minecraft:slowness",
-                    "amplifier": 1,
-                    "duration": 25,
-                    "is_ambient": false,
-                    "show_icon": true,
-                    "show_particles": false
-                },
-                {
-                    "effect": "minecraft:weakness",
-                    "amplifier": 0,
-                    "duration": 25,
-                    "is_ambient": false,
-                    "show_icon": true,
-                    "show_particles": false
-                }
-            ]
-        }
-    },
-
-    "snow_buff_tier_one": {
-        "type": "origins:action_over_time",
-        "interval": 20,
-        "condition": {
-            "type": "origins:and",
-            "conditions": [{
-                "type": "origins:resource",
-                "compare_to": 50,
-                "comparison": ">=",
-                "resource": "foxian:fluff_snowy_resource"
-            }, {
-                "type": "origins:resource",
-                "compare_to": 70,
-                "comparison": "<=",
-                "resource": "foxian:fluff_snowy_resource"
-            }]
-        },
-
-        "entity_action": {
-            "type": "origins:apply_effect",
-            "effect": {
-                "effect": "minecraft:speed",
-                "amplifier": 0,
-                "duration": 25,
-                "is_ambient": false,
-                "show_icon": true,
-                "show_particles": false
-            }
-        }
-    },
-
-    "snowy_buff_tier_two": {
-        "type": "origins:action_over_time",
-        "interval": 20,
-        "condition": {
-            "type": "origins:and",
-            "conditions": [{
-                "type": "origins:resource",
-                "compare_to": 70,
-                "comparison": ">=",
-                "resource": "foxian:fluff_snowy_resource"
-            }, {
-                "type": "origins:resource",
-                "compare_to": 90,
-                "comparison": "<=",
-                "resource": "foxian:fluff_snowy_resource"
-            }]
-        },
-
-        "entity_action": {
-            "type": "origins:apply_effect",
-            "effect": {
-                "effect": "minecraft:speed",
-                "amplifier": 1,
-                "duration": 25,
-                "is_ambient": false,
-                "show_icon": true,
-                "show_particles": false
-            }
-        }
-    },
-
-    "snow_buff_tier_three": {
-        "type": "origins:action_over_time",
-        "interval": 20,
-        "condition": {
-            "type": "origins:and",
-            "conditions": [{
-                "type": "origins:resource",
-                "compare_to": 90,
-                "comparison": ">=",
-                "resource": "foxian:fluff_snowy_resource"
-            }, {
-                "type": "origins:resource",
-                "compare_to": 100,
-                "comparison": "<=",
-                "resource": "foxian:fluff_snowy_resource"
-            }]
-        },
-
-        "entity_action": {
-            "type": "origins:apply_effect",
-            "effects" : [
-                {
-                    "effect": "minecraft:speed",
-                    "amplifier": 1,
-                    "duration": 25,
-                    "is_ambient": false,
-                    "show_icon": true,
-                    "show_particles": false
-                },
-                {
-                    "effect": "minecraft:strength",
-                    "amplifier": 0,
-                    "duration": 25,
-                    "is_ambient": false,
-                    "show_icon": true,
-                    "show_particles": false
-                }
-            ]
-        }
+    "__comment": {
+        "type": "origins:none",
+        "line1": "This includes adding to the water resource,"
     }
 }

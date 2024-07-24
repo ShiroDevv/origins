@@ -1,0 +1,329 @@
+{
+    "type": "origins:action_over_time",
+    "hidden": true,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:precipitation",
+                                "precipitation": "snow"
+                            },
+                            "inverted": true
+                        },
+                        {
+                            "type": "origins:on_block",
+                            "block_condition": {
+                                "type": "origins:block",
+                                "block": "minecraft:snow"
+                            },
+                            "inverted": true
+                        },
+                        {
+                            "type": "origins:on_block",
+                            "block_condition": {
+                                "type": "origins:block",
+                                "block": "minecraft:snow_block"
+                            },
+                            "inverted": true
+                        },
+                        {
+                            "type": "origins:resource",
+                            "compare_to": 0,
+                            "comparison": "==",
+                            "inverted": true,
+                            "resource": "foxian:fluff_snowy_resource"
+                        }
+                    ]
+                },
+                "if_action": {
+                    "type": "origins:change_resource",
+                    "change": 1,
+                    "operation": "add",
+                    "resource": "foxian:fluff_wet_resource"
+                }
+            },
+            {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:in_rain"
+                        },
+                        {
+                            "type": "origins:submerged_in",
+                            "fluid": "minecraft:water"
+                        }
+                    ]
+                },
+                "if_action": {
+                    "type": "origins:change_resource",
+                    "change": 1,
+                    "operation": "add",
+                    "resource": "foxian:fluff_wet_resource"
+                }
+            },
+            {
+                "type": "origins:if_else_list",
+                "actions": [
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:resource",
+                                    "compare_to": 50,
+                                    "comparison": ">=",
+                                    "resource": "foxian:fluff_snowy_resource"
+                                },
+                                {
+                                    "type": "origins:resource",
+                                    "compare_to": 70,
+                                    "comparison": "<=",
+                                    "resource": "foxian:fluff_snowy_resource"
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:apply_effect",
+                            "effect": {
+                                "effect": "minecraft:speed",
+                                "amplifier": 0,
+                                "duration": 25,
+                                "is_ambient": false,
+                                "show_icon": true,
+                                "show_particles": false
+                            }
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:resource",
+                                    "compare_to": 70,
+                                    "comparison": ">=",
+                                    "resource": "foxian:fluff_snowy_resource"
+                                },
+                                {
+                                    "type": "origins:resource",
+                                    "compare_to": 90,
+                                    "comparison": "<=",
+                                    "resource": "foxian:fluff_snowy_resource"
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:apply_effect",
+                            "effect": {
+                                "effect": "minecraft:speed",
+                                "amplifier": 1,
+                                "duration": 25,
+                                "is_ambient": false,
+                                "show_icon": true,
+                                "show_particles": false
+                            }
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:resource",
+                                    "compare_to": 90,
+                                    "comparison": ">=",
+                                    "resource": "foxian:fluff_snowy_resource"
+                                },
+                                {
+                                    "type": "origins:resource",
+                                    "compare_to": 100,
+                                    "comparison": "<=",
+                                    "resource": "foxian:fluff_snowy_resource"
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:apply_effect",
+                            "effects": [
+                                {
+                                    "effect": "minecraft:speed",
+                                    "amplifier": 1,
+                                    "duration": 25,
+                                    "is_ambient": false,
+                                    "show_icon": true,
+                                    "show_particles": false
+                                },
+                                {
+                                    "effect": "minecraft:strength",
+                                    "amplifier": 0,
+                                    "duration": 25,
+                                    "is_ambient": false,
+                                    "show_icon": true,
+                                    "show_particles": false
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:resource",
+                                    "compare_to": 50,
+                                    "comparison": ">=",
+                                    "resource": "foxian:fluff_wet_resource"
+                                },
+                                {
+                                    "type": "origins:resource",
+                                    "compare_to": 70,
+                                    "comparison": "<=",
+                                    "resource": "foxian:fluff_wet_resource"
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:apply_effect",
+                            "effect": {
+                                "effect": "minecraft:slowness",
+                                "amplifier": 0,
+                                "duration": 25,
+                                "is_ambient": false,
+                                "show_icon": true,
+                                "show_particles": false
+                            }
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:resource",
+                                    "compare_to": 70,
+                                    "comparison": ">=",
+                                    "resource": "foxian:fluff_wet_resource"
+                                },
+                                {
+                                    "type": "origins:resource",
+                                    "compare_to": 90,
+                                    "comparison": "<=",
+                                    "resource": "foxian:fluff_wet_resource"
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:apply_effect",
+                            "effect": {
+                                "effect": "minecraft:slowness",
+                                "amplifier": 1,
+                                "duration": 25,
+                                "is_ambient": false,
+                                "show_icon": true,
+                                "show_particles": false
+                            }
+                        }
+                    },
+                    {
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:resource",
+                                    "compare_to": 90,
+                                    "comparison": ">=",
+                                    "resource": "foxian:fluff_wet_resource"
+                                },
+                                {
+                                    "type": "origins:resource",
+                                    "compare_to": 100,
+                                    "comparison": "<=",
+                                    "resource": "foxian:fluff_wet_resource"
+                                }
+                            ]
+                        },
+                        "action": {
+                            "type": "origins:apply_effect",
+                            "effects": [
+                                {
+                                    "effect": "minecraft:slowness",
+                                    "amplifier": 1,
+                                    "duration": 25,
+                                    "is_ambient": false,
+                                    "show_icon": true,
+                                    "show_particles": false
+                                },
+                                {
+                                    "effect": "minecraft:weakness",
+                                    "amplifier": 0,
+                                    "duration": 25,
+                                    "is_ambient": false,
+                                    "show_icon": true,
+                                    "show_particles": false
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:resource",
+                    "compare_to": 100,
+                    "comparison": "==",
+                    "resource": "foxian:hunger_score_positive"
+                },
+                "if_action": {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:resistance",
+                        "duration": 25,
+                        "show_particles": false,
+                        "show_icon": true
+                    }
+                }
+            },
+            {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "compare_to": 0,
+                            "comparison": "==",
+                            "resource": "foxian:hunger_score_positive"
+                        },
+                        {
+                            "type": "origins:food_level",
+                            "compare_to": 10,
+                            "comparison": "<="
+                        }
+                    ]    
+                },
+                "if_action": {
+                    "type": "origins:change_resource",
+                    "change": 1,
+                    "operation": "add",
+                    "resource": "foxian:hunger_score_negative"
+                },
+                "else_action": {
+                    "type": "origins:change_resource",
+                    "change": -1,
+                    "operation": "add",
+                    "resource": "foxian:hunger_score_negative"
+                }
+            }
+        ]
+    }
+}

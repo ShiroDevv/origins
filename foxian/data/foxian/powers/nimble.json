@@ -22,5 +22,14 @@
           "type": "origins:in_tag",
           "tag": "minecraft:is_fall"
         }
+    },
+
+    "walk_through_berries": {
+        "type": "origins:phasing",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:sweet_berry_bush"
+        },
+        "render_type": "none"
     }
 }

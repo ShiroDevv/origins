@@ -1,0 +1,68 @@
+{
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "hidden": true,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:scoreboard",
+                    "compare_to": 1,
+                    "comparison": "==",
+                    "objective": "sleeping"
+                },
+                "if_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:apply_effect",
+                            "effect": {
+                                "amplifier": 0,
+                                "duration": 100,
+                                "effect": "minecraft:invisibility",
+                                "is_ambient": false,
+                                "show_icon": false,
+                                "show_particles": false
+                            }
+                        },
+                        {
+                            "type": "origins:change_resource",
+                            "change": 1,
+                            "operation": "set",
+                            "resource": "foxian:foxify_render_fox"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "command": "tp @e[type=fox,nbt={Sleeping:1b,NoAI:1b},tag=eepin,limit=1] ~ ~ ~ facing ^-0.3 ^ ^-0.15"
+                        }
+                    ]
+                },
+                "else_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:clear_effect",
+                            "effect": "minecraft:invisibility"
+                        },
+                        {
+                            "type": "origins:change_resource",
+                            "change": 0,
+                            "operation": "set",
+                            "resource": "foxian:foxify_render_fox"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "command": "tp @e[type=fox,nbt={Sleeping:1b,NoAI:1b},tag=eepin,limit=1] ~ ~10000 ~ facing ^-0.3 ^ ^-0.15"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "scoreboard players set @a[scores={awake=1..}] sleeping 0"
+            }
+        ]
+    }
+}

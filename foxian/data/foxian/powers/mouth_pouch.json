@@ -1,0 +1,7 @@
+{
+    "type": "origins:inventory",
+    "container_type": "dropper",
+    "key": "key.origins.secondary_active",
+    "name": "§2Mouth storage",
+    "description": "You are used to holding things with your mouth, allowing you to store a decent amount of items there"
+}

@@ -1,10 +1,15 @@
 {
     "powers": [
         "foxian:nimble",
+        "foxian:mouth_pouch",
         "foxian:hunger_score",
         "foxian:fluff",
         "foxian:foxify",
-        "foxian:init"
+        "foxian:refined_taste",
+        "foxian:pounce",
+        "foxian:init",
+        "foxian:20_tick_intervals",
+        "foxian:1_tick_intervals"
     ],
     "icon" : "minecraft:sweet_berries",
     "name": "Foxian",

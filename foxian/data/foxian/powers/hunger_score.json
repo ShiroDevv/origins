@@ -38,26 +38,6 @@
         }
     },
     
-    "damage_reduction": {
-        "type": "origins:action_over_time",
-        "interval": 20,
-        "entity_action": {
-            "type": "origins:apply_effect",
-            "effect": {
-                "effect": "minecraft:resistance",
-                "duration": 25,
-                "show_particles": false,
-                "show_icon": true
-            }
-        },
-        "condition": {
-            "type": "origins:resource",
-            "compare_to": 100,
-            "comparison": "==",
-            "resource": "foxian:hunger_score_positive"
-        }
-    },
-    
     "hunger_score_positive_damage_affect": {
         "type": "origins:modify_damage_dealt",
         "modifier": {
