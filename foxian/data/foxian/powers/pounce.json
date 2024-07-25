@@ -22,5 +22,7 @@
     "key": "key.origins.primary_active",
     "hud_render": {
         "should_render": true
-    }
+    },
+    "name": "§2Pounce",
+    "description": "Launch forward and a bit up, and get a massive damage bonus. 20 second cooldown."
 }

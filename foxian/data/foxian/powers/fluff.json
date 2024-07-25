@@ -41,46 +41,73 @@
             }
         }
     },
+    "heat_resource": {
+        "type": "origins:resource",
+        "max": 500,
+        "min": 0,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "order": 4,
+            "condition": {
+                "type": "origins:resource",
+                "compare_to": 0,
+                "comparison": "==",
+                "inverted": true,
+                "resource": "foxian:fluff_heat_resource"
+            }
+        }
+    },
     "snow_on_enter_water": {
         "type": "origins:action_over_time",
         "interval": 5,
-        "condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:submerged_in",
-                    "fluid": "minecraft:water"
-                },
-                {
-                    "type": "origins:resource",
-                    "compare_to": 0,
-                    "comparison": "==",
-                    "inverted": true,
-                    "resource": "foxian:fluff_snowy_resource"
-                }
-            ]
-        },
         "entity_action": {
             "type": "origins:and",
             "actions": [
                 {
-                    "type": "origins:change_resource",
-                    "change": -10,
-                    "operation": "add",
-                    "resource": "foxian:fluff_snowy_resource"
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:submerged_in",
+                                "fluid": "minecraft:water"
+                            },
+                            {
+                                "type": "origins:resource",
+                                "compare_to": 0,
+                                "comparison": "==",
+                                "inverted": true,
+                                "resource": "foxian:fluff_snowy_resource"
+                            }
+                        ]
+                    },
+                    "if_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "change": -10,
+                                "operation": "add",
+                                "resource": "foxian:fluff_snowy_resource"
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "change": 5,
+                                "operation": "add",
+                                "resource": "foxian:fluff_wet_resource"
+                            }
+                        ]
+                    }
                 },
                 {
                     "type": "origins:change_resource",
-                    "change": 5,
+                    "change": -5,
                     "operation": "add",
-                    "resource": "foxian:fluff_wet_resource"
+                    "resource": "foxian:fluff_heat_resource"
                 }
             ]
         }
-    },
-    "_comment": {
-        "type": "origins:none",
-        "line_1": "This includes the removal of the wet resource, the snow resource, and adding to the snow resource."
     },
     "10_interval": {
         "type": "origins:action_over_time",
@@ -218,12 +245,55 @@
                         "operation": "add",
                         "resource": "foxian:fluff_snowy_resource"
                     }
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:resource",
+                        "compare_to": 100,
+                        "comparison": "==",
+                        "resource": "foxian:fluff_heat_resource"
+                    },
+                    "if_action": {
+                        "type": "origins:set_on_fire",
+                        "duration": 15
+                    }
                 }
             ]
         }
     },
-    "__comment": {
-        "type": "origins:none",
-        "line1": "This includes adding to the water resource,"
+    "increase_heat_meter": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:dimension",
+                        "dimension": "minecraft:the_nether"
+                    },
+                    {
+                        "type": "origins:submerged_in",
+                        "fluid": "minecraft:lava"
+                    },
+                    {
+                        "type": "origins:on_fire"
+                    }
+                ]
+            },
+            "if_action": {
+                "type": "origins:change_resource",
+                "change": 1,
+                "operation": "add",
+                "resource": "foxian:fluff_heat_resource"
+            },
+            "else_action": {
+                "type": "origins:change_resource",
+                "change": 1,
+                "operation": "add",
+                "resource": "foxian:fluff_heat_resource"
+            }
+        }
     }
 }
